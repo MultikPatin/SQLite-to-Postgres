@@ -1,0 +1,17 @@
+services:
+
+  postgres:
+    image: postgres:13
+    container_name: movies_pg
+    restart: always
+    environment:
+      - POSTGRES_DB=movies_database
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=123qwe
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes:
+  postgres_data:

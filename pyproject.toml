@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "sqlite-to-postgres"
+version = "0.1.0"
+description = ""
+authors = ["Dmitry Patin <multik.patin@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.0.1"
+psycopg2-binary = "^2.9.9"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.11"
+pre-commit = "^3.6.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
